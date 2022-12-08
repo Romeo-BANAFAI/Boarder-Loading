@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body, .container, .percent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  height: 100vh;
+  background-color: #131221;
+}
+
+.container {
+  width: 350px;
+  height: 450px;
+  background-color: #fff;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 650px;
+  background-image: conic-gradient(transparent, transparent, transparent, #fff);
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container.active {
+  background-color: #000;
+}
+.container .percent {
+  position: absolute;
+  width: 340px;
+  height: 440px;
+  background-color: #131221;
+  border-radius: 12px;
+  font-size: 25px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
